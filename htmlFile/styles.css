@@ -17,46 +17,97 @@
 */
 
 /* Basic body styling */
+/* 
+  Name: Mika Kitazumi 
+  Date: October 9, 2024
+  Description: This CSS file provides styles for Mika's website, utilizing
+  flexbox for layout, grid for non-box model positioning, and some basic text styling.
+*/
+
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #b3e1ff;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
   color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+section {
   margin: 20px;
   padding: 20px;
+  border: 2px solid #3498db;
+  background-color: #ecf0f1;
+  border-radius: 8px;
 }
 
-/* Styling for headings */
-h1 {
-  color: #2c3e50;
-  text-align: center;
+footer{
+  position: absolute;
+  bottom: 0;
+  width:fit-content;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-h2 {
-  color: #34495e;
+/* Flexbox layout for links section */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
 }
 
-/* Links */
-a {
-  color: #2980b9;
+.flex-container a {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
   text-decoration: none;
+  border-radius: 5px;
 }
 
-a:hover {
-  text-decoration: underline;
+.flex-container a:hover {
+  background-color: #2980b9;
+}
+/**/
+.tabs{
+  font-size: 2em;
 }
 
-/* Navigation menu */
-nav ul {
-  list-style: none;
-  padding: 0;
+/* Grid layout for favorite things */
+.favorite-things {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin: 20px;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 10px;
+.favorite-things li {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  list-style-type: none;
 }
 
-/* Style for lists */
-ol, ul {
-  padding-left: 20px;
+/* Styling for images */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border: 5px solid #bdc3c7;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 20px auto;
+  padding: 10px;
+  border-left: 4px solid #7f8c8d;
+  color: #2c3e50;
 }
